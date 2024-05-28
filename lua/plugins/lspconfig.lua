@@ -145,7 +145,7 @@ return {
       --  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
-
+      require('lspconfig').gdscript.setup(capabilities)
       -- Enable the following language servers
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --
@@ -167,9 +167,6 @@ return {
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
-        --
-        gdtoolkit = {},
-
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -199,6 +196,7 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'gdtoolkit',
       })
       require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
 
@@ -214,7 +212,7 @@ return {
           end,
         },
       })
-      --     -- Can't add 'gdscript' to servers because it is not listed in Mason. So :MasonInstall gdscript won't work
+      -- Can't add 'gdscript' to servers because it is not listed in Mason. So :MasonInstall gdscript won't work
       local gdscript_config = {
         capabilities = capabilities,
         settings = {},

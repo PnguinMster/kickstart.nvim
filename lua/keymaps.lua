@@ -27,8 +27,8 @@ vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste over while maintaing 
 
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Deletes without overriding buffer' })
 
-vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Copy to clipboard' })
-vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = 'Copy till end of line to clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { desc = 'Copy to clipboard' })
+vim.keymap.set('n', '<leader>Y', '"+Y', { desc = 'Copy till end of line to clipboard' })
 
 vim.api.nvim_set_keymap('n', '<C-q>', '<C-v>', { noremap = true })
 
