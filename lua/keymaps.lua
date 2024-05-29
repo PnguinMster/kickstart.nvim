@@ -30,7 +30,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Deletes without ove
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { desc = 'Copy to clipboard' })
 vim.keymap.set('n', '<leader>Y', '"+Y', { desc = 'Copy till end of line to clipboard' })
 
-vim.api.nvim_set_keymap('n', '<C-q>', '<C-v>', { noremap = true })
+vim.keymap.set('n', '<C-q>', '<C-v>', { noremap = true })
 
 vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disables it' })
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
@@ -57,6 +57,12 @@ vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disables it' })
 -- vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, { desc = '[F]ormat buffer' })
+
+vim.keymap.set('n', '<leader>lv', function()
+  local current_dir = vim.fn.getcwd()
+  local command = '"C:\\Program Files\\LOVE\\love.exe" "' .. current_dir .. '"'
+  vim.fn.system(command)
+end, { desc = 'Run Love' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
