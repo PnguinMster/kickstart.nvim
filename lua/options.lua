@@ -18,6 +18,9 @@ vim.opt.showmode = false
 
 vim.opt.wrap = false
 vim.opt.expandtab = false
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
