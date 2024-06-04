@@ -6,39 +6,16 @@ return {
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'catppuccin/nvim',
     name = 'catppuccin',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
+    lazy = true,
 
     opts = {
       transparent_background = true,
-      fidget = true,
-      gitsigns = true,
-      harpoon = true,
-      mason = true,
-      native_lsp = {
-        enabled = true,
-        virtual_text = {
-          errors = { 'italic' },
-          hints = { 'italic' },
-          warnings = { 'italic' },
-          information = { 'italic' },
-        },
-        underlines = {
-          errors = { 'underline' },
-          hints = { 'underline' },
-          warnings = { 'underline' },
-          information = { 'underline' },
-        },
-        inlay_hints = {
-          background = true,
-        },
-      },
-      mini = {
-        enabled = true,
-        indentscope_color = 'lavender', -- catppuccin color (eg. `lavender`) Default: text
-      },
-      telescope = { enebled = true },
+      -- native_lsp = {
+      --   enabled = true,
+      -- },
       which_key = true,
-      treesitter = true,
+      nvimtree = false,
+      notify = false,
     },
     init = function()
       -- Load the colorscheme here.

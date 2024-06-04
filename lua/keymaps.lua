@@ -15,8 +15,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Shows workspace files' })
 
 vim.keymap.set('n', 'J', 'mzJ`z', { desc = 'Keeps cursor at the begging after perfomong default action' })
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Moves block code up' })
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Moves block code down' })
+-- vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Moves block code up' })
+-- vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Moves block code down' })
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Centers on page down' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Centers on page up' })
