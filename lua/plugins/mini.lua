@@ -34,17 +34,17 @@ return {
         return '%2l:%-2v'
       end
 
-      local diff = require('mini.diff')
-      diff.setup({
-        view = {
-          style = 'sign',
-          signs = {
-            add = '▎',
-            change = '▎',
-            delete = '',
-          },
-        },
-      })
+      -- local diff = require('mini.diff')
+      -- diff.setup({
+      --   view = {
+      --     style = 'sign',
+      --     signs = {
+      --       add = '▎',
+      --       change = '▎',
+      --       delete = '',
+      --     },
+      --   },
+      -- })
 
       local move = require('mini.move')
       move.setup({})
