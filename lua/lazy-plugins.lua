@@ -50,7 +50,7 @@ require('lazy').setup({
 
   require('plugins.mini'),
 
-  -- require('plugins.lualine'),
+  require('plugins.lualine'),
 
   require('plugins.treesitter'),
 
