@@ -3,10 +3,11 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     event = 'VeryLazy',
+    lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'vim', 'vimdoc', 'gdscript', 'godot_resource', 'gdshader' },
+      ensure_installed = { 'c', 'lua', 'luadoc', 'vim', 'vimdoc', 'gdscript', 'godot_resource', 'gdshader' },
       -- Autoinstall languages that are not installed
-      auto_install = true,
+      auto_install = false,
       highlight = {
         enable = true,
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
@@ -21,7 +22,7 @@ return {
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 
       -- Prefer git instead of curl in order to improve connectivity in some environments
-      require('nvim-treesitter.install').prefer_git = true
+      -- require('nvim-treesitter.install').prefer_git = true
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup(opts)
 
