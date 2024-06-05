@@ -10,12 +10,48 @@ return {
 
     opts = {
       transparent_background = true,
-      -- native_lsp = {
-      --   enabled = true,
-      -- },
-      which_key = true,
-      nvimtree = false,
-      notify = false,
+      default_integrations = false,
+
+      integrations = {
+        -- gitsigns = false,
+        -- nvimtree = false,
+        -- notify = false,
+        fidget = true,
+        harpoon = true,
+        mason = true,
+        cmp = true,
+        native_lsp = {
+          enabled = true,
+          virtual_text = {
+            errors = { 'italic' },
+            hints = { 'italic' },
+            warnings = { 'italic' },
+            information = { 'italic' },
+            ok = { 'italic' },
+          },
+          underlines = {
+            errors = { 'underline' },
+            hints = { 'underline' },
+            warnings = { 'underline' },
+            information = { 'underline' },
+            ok = { 'underline' },
+          },
+          inlay_hints = {
+            background = true,
+          },
+        },
+        treesitter = true,
+        telescope = { enabled = true },
+        which_key = true,
+        mini = {
+          enabled = true,
+          indentscope_color = '',
+        },
+      },
+
+      custom_highlights = function()
+        return { CursorLine = { bg = 'none' } }
+      end,
     },
     init = function()
       -- Load the colorscheme here.
