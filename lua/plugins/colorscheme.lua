@@ -50,7 +50,10 @@ return {
       },
 
       custom_highlights = function()
-        return { CursorLine = { bg = 'none' } }
+        return {
+          CursorLine = { bg = 'none' },
+          MiniStatuslineFilename = { bg = 'none' },
+        }
       end,
     },
     init = function()

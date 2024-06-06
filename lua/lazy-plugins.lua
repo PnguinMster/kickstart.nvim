@@ -50,7 +50,7 @@ require('lazy').setup({
 
   require('plugins.mini'),
 
-  require('plugins.lualine'),
+  -- require('plugins.lualine'),
 
   require('plugins.treesitter'),
 
@@ -72,7 +72,7 @@ require('lazy').setup({
   require('plugins.lint'),
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
-  require('plugins.gitsigns'), -- adds gitsigns recommend keymaps
+  -- require('plugins.gitsigns'), -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
