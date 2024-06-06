@@ -20,7 +20,6 @@ return {
       return {
         options = {
           theme = 'auto',
-          fmt = string.lower,
         },
         sections = {
           lualine_a = {
