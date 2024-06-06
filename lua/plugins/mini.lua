@@ -49,9 +49,6 @@ return {
       local move = require('mini.move')
       move.setup({})
 
-      -- local git = require('mini.git')
-      -- git.setup({})
-
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
