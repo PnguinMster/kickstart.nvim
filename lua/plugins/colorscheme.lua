@@ -43,16 +43,16 @@ return {
         treesitter = true,
         telescope = { enabled = true },
         which_key = true,
-        mini = {
-          enabled = true,
-          indentscope_color = '',
-        },
+        -- mini = {
+        --   enabled = true,
+        --   indentscope_color = '',
+        -- },
       },
 
       custom_highlights = function()
         return {
           CursorLine = { bg = 'none' },
-          MiniStatuslineFilename = { bg = 'none' },
+          -- MiniStatuslineFilename = { bg = 'none' },
         }
       end,
     },
