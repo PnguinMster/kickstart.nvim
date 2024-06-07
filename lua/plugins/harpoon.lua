@@ -2,7 +2,7 @@ return {
   'ThePrimeagen/harpoon',
   branch = 'harpoon2',
   event = 'VeryLazy',
-  -- dependencies = { 'nvim-lua/plenary.nvim', lazy = true },
+  dependencies = { 'nvim-lua/plenary.nvim', lazy = true },
 
   settings = {
     save_one_toggle = true,

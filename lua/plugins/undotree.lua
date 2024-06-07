@@ -1,4 +1,5 @@
 return {
+  -- Git Stuff
   'mbbill/undotree',
   event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
   config = function()
