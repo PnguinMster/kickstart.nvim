@@ -1,7 +1,8 @@
 return {
   {
     'nvim-lualine/lualine.nvim',
-    event = 'VeryLazy',
+    -- event = 'VeryLazy',
+    event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     init = function()
       vim.g.lualine_laststatus = vim.o.laststatus
