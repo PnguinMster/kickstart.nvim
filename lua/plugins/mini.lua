@@ -1,7 +1,8 @@
 return {
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
-    event = 'VeryLazy',
+    -- event = 'VeryLazy',
+  event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
 
     config = function()
       -- Better Around/Inside textobjects
@@ -48,6 +49,9 @@ return {
 
       local move = require('mini.move')
       move.setup({})
+
+      local cursorword = require('mini.cursorword')
+      cursorword.setup({})
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim

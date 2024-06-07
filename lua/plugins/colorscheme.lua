@@ -68,15 +68,15 @@ return {
     end,
   },
 
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-
-    opts = {
-      variant = 'moon',
-      styles = {
-        transparency = true,
-      },
-    },
-  },
+  -- {
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
+  --
+  --   opts = {
+  --     variant = 'moon',
+  --     styles = {
+  --       transparency = true,
+  --     },
+  --   },
+  -- },
 }
