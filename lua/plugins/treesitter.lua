@@ -2,7 +2,7 @@ return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
+    event = { 'BufReadPost' },
     lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
     opts = {
       ensure_installed = { 'c', 'lua', 'luadoc', 'vim', 'vimdoc', 'gdscript', 'godot_resource', 'gdshader' },

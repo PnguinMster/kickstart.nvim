@@ -1,2 +1,2 @@
- -- Detect tabstop and shiftwidth automatically
-return { 'tpope/vim-sleuth', event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' } }
+-- Detect tabstop and shiftwidth automatically
+return { 'tpope/vim-sleuth', event = { 'BufReadPost', 'InsertEnter' } }

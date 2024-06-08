@@ -1,1 +1,1 @@
-return { 'tpope/vim-fugitive', event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' }, cmd = 'Git' }
+return { 'tpope/vim-fugitive', cmd = 'Git' }

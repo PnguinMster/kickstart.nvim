@@ -1,7 +1,7 @@
 return {
   { -- Linting
     'mfussenegger/nvim-lint',
-    event = { 'BufReadPre', 'BufNewFile', 'InsertLeave' },
+    event = { 'InsertLeave' },
     config = function()
       local lint = require('lint')
       lint.linters_by_ft = {

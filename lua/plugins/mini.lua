@@ -2,7 +2,7 @@ return {
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     -- event = 'VeryLazy',
-    event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
+    event = { 'BufReadPost', 'BufWritePost'},
 
     config = function()
       -- Better Around/Inside textobjects
