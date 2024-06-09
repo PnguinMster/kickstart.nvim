@@ -13,7 +13,7 @@ return {
           starter.sections.sessions(5, true),
         },
         content_hooks = {
-          starter.gen_hook.adding_bullet(),
+          starter.gen_hook.adding_bullet('', false),
           starter.gen_hook.indexing('all', { 'Builtin actions' }),
           starter.gen_hook.aligning('center', 'center'),
         },
