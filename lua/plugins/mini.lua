@@ -1,10 +1,24 @@
 return {
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
-    -- event = 'VeryLazy',
-    event = { 'BufReadPost', 'BufWritePost'},
+    event = 'VimEnter',
 
     config = function()
+      local sessions = require('mini.sessions')
+      sessions.setup({ event = { 'BufWritePost' } })
+
+      local starter = require('mini.starter')
+      starter.setup({
+        items = {
+          starter.sections.sessions(5, true),
+        },
+        content_hooks = {
+          starter.gen_hook.adding_bullet(),
+          starter.gen_hook.indexing('all', { 'Builtin actions' }),
+          starter.gen_hook.aligning('center', 'center'),
+        },
+      })
+
       -- Better Around/Inside textobjects
       --
       -- Examples:
@@ -37,6 +51,7 @@ return {
 
       local diff = require('mini.diff')
       diff.setup({
+        event = { 'BufReadPost', 'BufWritePost' },
         view = {
           style = 'sign',
           signs = {
@@ -48,10 +63,14 @@ return {
       })
 
       local move = require('mini.move')
-      move.setup({})
+      move.setup({
+        event = { 'BufReadPost', 'BufWritePost' },
+      })
 
       local cursorword = require('mini.cursorword')
-      cursorword.setup({})
+      cursorword.setup({
+        event = { 'BufReadPost', 'BufWritePost' },
+      })
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
