@@ -18,12 +18,12 @@ vim.keymap.set('n', 'J', 'mzJ`z', { desc = 'Keeps cursor at the begging after pe
 -- vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Moves block code up' })
 -- vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Moves block code down' })
 
-vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Centers on page down' })
-vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Centers on page up' })
+-- vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Centers on page down' })
+-- vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Centers on page up' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Search term stays in the middle on next' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Search term stays in the middle on previous' })
 
-vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste over while maintaing buffer' })
+vim.keymap.set('x', '<leader>P', [["_dP]], { desc = 'Paste over while maintaing buffer' })
 
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Deletes without overriding buffer' })
 
