@@ -5,7 +5,8 @@ return {
     event =  'BufReadPost' ,
     lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
     opts = {
-      ensure_installed = { 'c', 'lua', 'luadoc', 'vim', 'vimdoc', 'gdscript', 'godot_resource', 'gdshader' },
+      ensure_installed = { 'c', 'lua', 'luadoc', 'vim', 'vimdoc' },
+      -- ensure_installed = { 'c', 'lua', 'luadoc', 'vim', 'vimdoc', 'gdscript', 'godot_resource', 'gdshader' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {

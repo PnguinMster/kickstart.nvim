@@ -209,7 +209,7 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
-        'gdtoolkit',
+        -- 'gdtoolkit',
       })
       require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
 
@@ -226,15 +226,15 @@ return {
         },
       })
       -- Can't add 'gdscript' to servers because it is not listed in Mason. So :MasonInstall gdscript won't work
-      local gdscript_config = {
-        capabilities = capabilities,
-        settings = {},
-      }
-      if vim.fn.has('win32') == 1 then
-        -- Windows specific.
-        gdscript_config['cmd'] = { 'ncat', 'localhost', os.getenv('GDScript_Port') or '6005' }
-      end
-      require('lspconfig').gdscript.setup(gdscript_config)
+      -- local gdscript_config = {
+      --   capabilities = capabilities,
+      --   settings = {},
+      -- }
+      -- if vim.fn.has('win32') == 1 then
+      --   -- Windows specific.
+      --   gdscript_config['cmd'] = { 'ncat', 'localhost', os.getenv('GDScript_Port') or '6005' }
+      -- end
+      -- require('lspconfig').gdscript.setup(gdscript_config)
     end,
   },
 }

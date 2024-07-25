@@ -17,7 +17,7 @@ require('lazy-bootstrap')
 require('lazy-plugins')
 
 -- [[ Enable Neovim to be Godot Editor ]]
-require('godot-server')
+-- require('godot-server')
 
 --- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
