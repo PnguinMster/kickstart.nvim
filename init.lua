@@ -1,23 +1,32 @@
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+if vim.g.vscode then
+  -- VSCode extension
+  --
+  -- [[ Vscode keymaps and options ]]
+  require('vscode-options')
+else
+  -- Ordinary Neovim
+  --
+  --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+  vim.g.mapleader = ' '
+  vim.g.maplocalleader = ' '
 
-vim.g.have_nerd_font = true
+  vim.g.have_nerd_font = true
 
--- [[ Setting options ]]
-require('options')
+  -- [[ Setting options ]]
+  require('options')
 
--- [[ Basic Keymaps ]]
-require('keymaps')
+  -- [[ Basic Keymaps ]]
+  require('keymaps')
 
--- [[ Install `lazy.nvim` plugin manager ]]
-require('lazy-bootstrap')
+  -- [[ Install `lazy.nvim` plugin manager ]]
+  require('lazy-bootstrap')
 
--- [[ Configure and install plugins ]]
-require('lazy-plugins')
+  -- [[ Configure and install plugins ]]
+  require('lazy-plugins')
 
--- [[ Enable Neovim to be Godot Editor ]]
--- require('godot-server')
+  -- [[ Enable Neovim to be Godot Editor ]]
+  -- require('godot-server')
 
---- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+  --- The line beneath this is called `modeline`. See `:help modeline`
+  -- vim: ts=2 sts=2 sw=2 et
+end
