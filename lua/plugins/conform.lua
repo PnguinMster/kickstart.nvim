@@ -1,7 +1,7 @@
 return {
   { -- Autoformat
     'stevearc/conform.nvim',
-    event =  'BufReadPost',
+    event = 'BufReadPost',
     keys = {
       {
         '<leader>f',
@@ -26,6 +26,8 @@ return {
       -- end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        html = { 'prettier' },
+        css = { 'prettier' },
         -- gdscript = { 'gdformat' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },

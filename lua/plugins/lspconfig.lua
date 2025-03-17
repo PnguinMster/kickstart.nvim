@@ -168,6 +168,9 @@ return {
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
+
+        html = {},
+        cssls = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -210,6 +213,9 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         -- 'gdtoolkit',
+        'html-lsp',
+        'css-lsp',
+        'prettier',
       })
       require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
 

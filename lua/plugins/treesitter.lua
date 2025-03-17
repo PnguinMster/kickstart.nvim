@@ -2,10 +2,10 @@ return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    event =  'BufReadPost' ,
+    event = 'BufReadPost',
     lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
     opts = {
-      ensure_installed = { 'c', 'lua', 'luadoc', 'vim', 'vimdoc' },
+      ensure_installed = { 'c', 'lua', 'luadoc', 'vim', 'vimdoc', 'html', 'css' },
       -- ensure_installed = { 'c', 'lua', 'luadoc', 'vim', 'vimdoc', 'gdscript', 'godot_resource', 'gdshader' },
       -- Autoinstall languages that are not installed
       auto_install = true,
