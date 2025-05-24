@@ -17,7 +17,7 @@ vim.opt.relativenumber = true
 vim.opt.showmode = false
 -- vim.opt.laststatus = 2
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.expandtab = false
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
