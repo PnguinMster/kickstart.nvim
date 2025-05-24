@@ -1,15 +1,15 @@
 return {
   { -- Autoformat
-    'stevearc/conform.nvim',
-    event = 'BufReadPost',
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     keys = {
       {
-        '<leader>f',
+        "<leader>f",
         function()
-          require('conform').format({ async = true, lsp_fallback = true })
+          require("conform").format({ async = true, lsp_fallback = true })
         end,
-        mode = '',
-        desc = '[F]ormat buffer',
+        mode = "",
+        desc = "[F]ormat buffer",
       },
     },
     opts = {
@@ -25,9 +25,10 @@ return {
       --   }
       -- end,
       formatters_by_ft = {
-        lua = { 'stylua' },
-        html = { 'prettier' },
-        css = { 'prettier' },
+        lua = { "stylua" },
+        html = { "prettier" },
+        css = { "prettier" },
+        markdown = { "prettier" },
         -- gdscript = { 'gdformat' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
@@ -35,6 +36,20 @@ return {
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         -- javascript = { { "prettierd", "prettier" } },
+      },
+      formatters = {
+        prettier = {
+          prepend_args = { "--print-width", "120" },
+        },
+        stylua = {
+          prepend_args = {
+            "--column-width", "160",
+            "--indent-type", "Spaces",
+            "--indent-width", "2",
+            "--quote-style", "AutoPreferSingle",
+            "--line-endings", "Unix",
+          },
+        },
       },
     },
   },
