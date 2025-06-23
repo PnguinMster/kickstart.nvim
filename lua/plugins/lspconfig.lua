@@ -180,7 +180,6 @@ return {
               completion = {
                 callSnippet = 'Replace',
               },
-              --
               workspace = {
                 checkThirdParty = false,
                 telemetry = { enable = false },
@@ -189,6 +188,7 @@ return {
                 },
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+              diagnostics = { disable = { 'missing-fields' }, globals = { 'vim' } },
               -- diagnostics = { disable = { 'missing-fields' } },
             },
           },
